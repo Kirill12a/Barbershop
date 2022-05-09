@@ -13,9 +13,12 @@
 		D207B1F728295D4700989E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D207B1F528295D4700989E0D /* Main.storyboard */; };
 		D207B1F928295D4800989E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D207B1F828295D4800989E0D /* Assets.xcassets */; };
 		D207B1FC28295D4800989E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D207B1FA28295D4800989E0D /* LaunchScreen.storyboard */; };
+		DED59E2B2D10D55F656CD041 /* Pods_Barbershop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4640580412E2561D4C65F702 /* Pods_Barbershop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4640580412E2561D4C65F702 /* Pods_Barbershop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barbershop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.release.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.release.xcconfig"; sourceTree = "<group>"; };
 		D207B1EC28295D4700989E0D /* Barbershop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barbershop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D207B1EF28295D4700989E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D207B1F128295D4700989E0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D207B1F828295D4800989E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D207B1FB28295D4800989E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D207B1FD28295D4800989E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.debug.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED59E2B2D10D55F656CD041 /* Pods_Barbershop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0268B677141C6B0DCDA181C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4640580412E2561D4C65F702 /* Pods_Barbershop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD10D72A12BA110FBA94292C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */,
+				6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D207B1E328295D4700989E0D = {
 			isa = PBXGroup;
 			children = (
 				D207B1EE28295D4700989E0D /* Barbershop */,
 				D207B1ED28295D4700989E0D /* Products */,
+				AD10D72A12BA110FBA94292C /* Pods */,
+				0268B677141C6B0DCDA181C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D207B20028295D4800989E0D /* Build configuration list for PBXNativeTarget "Barbershop" */;
 			buildPhases = (
+				06B7AF0DBD541BDDE59B2706 /* [CP] Check Pods Manifest.lock */,
 				D207B1E828295D4700989E0D /* Sources */,
 				D207B1E928295D4700989E0D /* Frameworks */,
 				D207B1EA28295D4700989E0D /* Resources */,
+				FF57C25D096AB22BEC7E2530 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06B7AF0DBD541BDDE59B2706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Barbershop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF57C25D096AB22BEC7E2530 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D207B1E828295D4700989E0D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		D207B20128295D4800989E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		D207B20228295D4800989E0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
