@@ -10,11 +10,11 @@ import SnapKit
 
 class AboutvView: UIView {
 
+ 
 
     lazy var myImage: UIImageView = {
         var imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        
+        imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "view")
         return imageView
     }()
@@ -43,11 +43,12 @@ class AboutvView: UIView {
 
 
     private func screenConstraint(){
+
+
         self.addSubview(myImage)
         myImage.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.top.leading.trailing.bottom.equalToSuperview()
         }
-//        myImage.center = self.center
 
 
         self.addSubview(logoImage)
@@ -68,16 +69,8 @@ class AboutvView: UIView {
             make.width.equalTo(250)
             make.height.equalTo(50)
             make.top.equalTo(logoImage.snp_bottomMargin).inset(150)
-
         }
-
-
     }
-
-
-
-
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
