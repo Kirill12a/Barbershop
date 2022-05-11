@@ -47,7 +47,7 @@ class NoutsViewContoller: UIViewController {
         // Navigation Bar:
         navigationController?.navigationBar.barTintColor = UIColor.white
 
-        // Navigation Bar Text:
+        // ext:
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.orange]
 
         // Tab Bar:
