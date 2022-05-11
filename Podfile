@@ -6,5 +6,5 @@ target 'Barbershop' do
   use_frameworks!
 
   # Pods for Barbershop
-	pod 'SnapKit'
+	pod 'SnapKit', '~> 5.0.0'
 end

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		047FA2B0282BBE0700BFB0A1 /* UICollectionGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA2AF282BBE0700BFB0A1 /* UICollectionGallery.swift */; };
 		047FA2B2282BBFB300BFB0A1 /* ModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA2B1282BBFB300BFB0A1 /* ModelCollection.swift */; };
 		047FA2B4282BC10200BFB0A1 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA2B3282BC10200BFB0A1 /* GalleryCollectionViewCell.swift */; };
+		B45438B2781853550AFAA96E /* Pods_Barbershop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FEAE9955CFBA360D8851BC /* Pods_Barbershop.framework */; };
 		D207B1F028295D4700989E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B1EF28295D4700989E0D /* AppDelegate.swift */; };
 		D207B1F228295D4700989E0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B1F128295D4700989E0D /* SceneDelegate.swift */; };
 		D207B1F928295D4800989E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D207B1F828295D4800989E0D /* Assets.xcassets */; };
@@ -22,15 +22,14 @@
 		D207B212282961D000989E0D /* AboutvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B211282961D000989E0D /* AboutvView.swift */; };
 		D207B2142829666000989E0D /* NoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B2132829666000989E0D /* NoutsView.swift */; };
 		D207B2162829666B00989E0D /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B2152829666B00989E0D /* GalleryView.swift */; };
-		DED59E2B2D10D55F656CD041 /* Pods_Barbershop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4640580412E2561D4C65F702 /* Pods_Barbershop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		047FA2AF282BBE0700BFB0A1 /* UICollectionGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionGallery.swift; sourceTree = "<group>"; };
 		047FA2B1282BBFB300BFB0A1 /* ModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCollection.swift; sourceTree = "<group>"; };
 		047FA2B3282BC10200BFB0A1 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
-		4640580412E2561D4C65F702 /* Pods_Barbershop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barbershop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.release.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.release.xcconfig"; sourceTree = "<group>"; };
+		15FEAE9955CFBA360D8851BC /* Pods_Barbershop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barbershop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A07B5B3D86D021BB95A40C8 /* Pods-Barbershop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.debug.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.debug.xcconfig"; sourceTree = "<group>"; };
+		6DD57967FE11EE4D5806ECB1 /* Pods-Barbershop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.release.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.release.xcconfig"; sourceTree = "<group>"; };
 		D207B1EC28295D4700989E0D /* Barbershop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barbershop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D207B1EF28295D4700989E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D207B1F128295D4700989E0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +44,6 @@
 		D207B211282961D000989E0D /* AboutvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutvView.swift; sourceTree = "<group>"; };
 		D207B2132829666000989E0D /* NoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoutsView.swift; sourceTree = "<group>"; };
 		D207B2152829666B00989E0D /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.debug.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,28 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED59E2B2D10D55F656CD041 /* Pods_Barbershop.framework in Frameworks */,
+				B45438B2781853550AFAA96E /* Pods_Barbershop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0268B677141C6B0DCDA181C1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4640580412E2561D4C65F702 /* Pods_Barbershop.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AD10D72A12BA110FBA94292C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */,
-				6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */,
+				2A07B5B3D86D021BB95A40C8 /* Pods-Barbershop.debug.xcconfig */,
+				6DD57967FE11EE4D5806ECB1 /* Pods-Barbershop.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC4BAEFD54595AFEA4558E83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FEAE9955CFBA360D8851BC /* Pods_Barbershop.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D207B1E328295D4700989E0D = {
@@ -83,7 +81,7 @@
 				D207B1EE28295D4700989E0D /* Barbershop */,
 				D207B1ED28295D4700989E0D /* Products */,
 				AD10D72A12BA110FBA94292C /* Pods */,
-				0268B677141C6B0DCDA181C1 /* Frameworks */,
+				CC4BAEFD54595AFEA4558E83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,7 +141,6 @@
 				D207B2092829610500989E0D /* NoutsViewContoller.swift */,
 				D207B20B2829610F00989E0D /* AboutvViewController.swift */,
 				D207B20D2829611800989E0D /* GalleryViewController.swift */,
-				047FA2AF282BBE0700BFB0A1 /* UICollectionGallery.swift */,
 				047FA2B3282BC10200BFB0A1 /* GalleryCollectionViewCell.swift */,
 				D207B20F2829613300989E0D /* TabBarController.swift */,
 			);
@@ -157,11 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D207B20028295D4800989E0D /* Build configuration list for PBXNativeTarget "Barbershop" */;
 			buildPhases = (
-				06B7AF0DBD541BDDE59B2706 /* [CP] Check Pods Manifest.lock */,
+				A6FE84D1BD0D2C4BE077059E /* [CP] Check Pods Manifest.lock */,
 				D207B1E828295D4700989E0D /* Sources */,
 				D207B1E928295D4700989E0D /* Frameworks */,
 				D207B1EA28295D4700989E0D /* Resources */,
-				FF57C25D096AB22BEC7E2530 /* [CP] Embed Pods Frameworks */,
+				1B93B5A652A1A33E3CE40B2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +215,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06B7AF0DBD541BDDE59B2706 /* [CP] Check Pods Manifest.lock */ = {
+		1B93B5A652A1A33E3CE40B2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6FE84D1BD0D2C4BE077059E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,23 +254,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF57C25D096AB22BEC7E2530 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Barbershop/Pods-Barbershop-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,7 +273,6 @@
 				D207B212282961D000989E0D /* AboutvView.swift in Sources */,
 				D207B2162829666B00989E0D /* GalleryView.swift in Sources */,
 				047FA2B4282BC10200BFB0A1 /* GalleryCollectionViewCell.swift in Sources */,
-				047FA2B0282BBE0700BFB0A1 /* UICollectionGallery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,13 +406,13 @@
 		};
 		D207B20128295D4800989E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */;
+			baseConfigurationReference = 2A07B5B3D86D021BB95A40C8 /* Pods-Barbershop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 87MK9SAST8;
+				DEVELOPMENT_TEAM = UJ8B9FFXUA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Barbershop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -439,13 +435,13 @@
 		};
 		D207B20228295D4800989E0D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */;
+			baseConfigurationReference = 6DD57967FE11EE4D5806ECB1 /* Pods-Barbershop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 87MK9SAST8;
+				DEVELOPMENT_TEAM = UJ8B9FFXUA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Barbershop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

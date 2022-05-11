@@ -8,7 +8,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     let myImgaeView : UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+//        imageView.backgroundColor = .blue
         return imageView
     }()
     
@@ -19,7 +19,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     }
     
     private func constraintImage() {
-        self.addSubview(myImgaeView)
+        contentView.addSubview(myImgaeView)
         myImgaeView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
