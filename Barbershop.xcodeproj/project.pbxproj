@@ -19,6 +19,8 @@
 		D207B212282961D000989E0D /* AboutvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B211282961D000989E0D /* AboutvView.swift */; };
 		D207B2142829666000989E0D /* NoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B2132829666000989E0D /* NoutsView.swift */; };
 		D207B2162829666B00989E0D /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B2152829666B00989E0D /* GalleryView.swift */; };
+		D207B218282B109600989E0D /* CellServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B217282B109600989E0D /* CellServices.swift */; };
+		D207B21A282B140100989E0D /* ServicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B219282B140100989E0D /* ServicesModel.swift */; };
 		DED59E2B2D10D55F656CD041 /* Pods_Barbershop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4640580412E2561D4C65F702 /* Pods_Barbershop.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		D207B211282961D000989E0D /* AboutvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutvView.swift; sourceTree = "<group>"; };
 		D207B2132829666000989E0D /* NoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoutsView.swift; sourceTree = "<group>"; };
 		D207B2152829666B00989E0D /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		D207B217282B109600989E0D /* CellServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellServices.swift; sourceTree = "<group>"; };
+		D207B219282B140100989E0D /* ServicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesModel.swift; sourceTree = "<group>"; };
 		D2C518B46FCB1A716DC66A56 /* Pods-Barbershop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.debug.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D207B207282960D300989E0D /* ModelData.swift */,
+				D207B219282B140100989E0D /* ServicesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				D207B211282961D000989E0D /* AboutvView.swift */,
 				D207B2132829666000989E0D /* NoutsView.swift */,
 				D207B2152829666B00989E0D /* GalleryView.swift */,
+				D207B21B282B19FA00989E0D /* NoutsViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +145,14 @@
 				D207B20F2829613300989E0D /* TabBarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D207B21B282B19FA00989E0D /* NoutsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D207B217282B109600989E0D /* CellServices.swift */,
+			);
+			path = NoutsViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +276,11 @@
 				D207B208282960D300989E0D /* ModelData.swift in Sources */,
 				D207B1F028295D4700989E0D /* AppDelegate.swift in Sources */,
 				D207B1F228295D4700989E0D /* SceneDelegate.swift in Sources */,
+				D207B21A282B140100989E0D /* ServicesModel.swift in Sources */,
 				D207B20C2829610F00989E0D /* AboutvViewController.swift in Sources */,
 				D207B212282961D000989E0D /* AboutvView.swift in Sources */,
 				D207B2162829666B00989E0D /* GalleryView.swift in Sources */,
+				D207B218282B109600989E0D /* CellServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

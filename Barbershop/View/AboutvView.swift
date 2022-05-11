@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class AboutvView: UIView {
 
@@ -23,6 +24,8 @@ class AboutvView: UIView {
         var imageLogo = UIImageView()
         imageLogo.contentMode = .scaleAspectFit
         imageLogo.image = UIImage(named: "barber")
+
+        imageLogo.backgroundColor = .red
         return imageLogo
     }()
 
@@ -39,6 +42,7 @@ class AboutvView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         screenConstraint()
+
     }
 
 
@@ -62,6 +66,7 @@ class AboutvView: UIView {
         }
 
 
+
         self.addSubview(buttonRegister)
         buttonRegister.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -75,3 +80,25 @@ class AboutvView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+//MARK: - Canvas
+struct FlowProvider: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ContainterView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
+            ContainterView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
+        }
+    }
+
+    struct ContainterView: UIViewControllerRepresentable {
+
+        let view = AboutvViewController()
+        func makeUIViewController(context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) -> AboutvViewController {
+            return view
+        }
+
+        func updateUIViewController(_ uiViewController: FlowProvider.ContainterView.UIViewControllerType, context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) {
+
+        }
+    }
+}
+
