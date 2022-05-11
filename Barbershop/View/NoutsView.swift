@@ -49,9 +49,9 @@ class NoutsView: UIView {
         let map = MKMapView()
         map.overrideUserInterfaceStyle = .light
         let anotattion = MKPointAnnotation()
-        anotattion.title = "Река хуй знает какая"
-        anotattion.subtitle = "Рил не знаю ))"
-        anotattion.coordinate = CLLocationCoordinate2D(latitude: 55.4515, longitude: 37.3712)
+        anotattion.title = "Мы тут"
+        anotattion.subtitle = "Ул. Ленина, 73 "
+        anotattion.coordinate = CLLocationCoordinate2D(latitude: 49.62808, longitude: 41.72708)
         map.showAnnotations([anotattion], animated: true)
         map.camera.altitude *= 1.4
         map.addAnnotation(anotattion)
