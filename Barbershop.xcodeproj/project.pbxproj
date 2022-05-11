@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047FA2B0282BBE0700BFB0A1 /* UICollectionGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA2AF282BBE0700BFB0A1 /* UICollectionGallery.swift */; };
+		047FA2B2282BBFB300BFB0A1 /* ModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA2B1282BBFB300BFB0A1 /* ModelCollection.swift */; };
+		047FA2B4282BC10200BFB0A1 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA2B3282BC10200BFB0A1 /* GalleryCollectionViewCell.swift */; };
 		D207B1F028295D4700989E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B1EF28295D4700989E0D /* AppDelegate.swift */; };
 		D207B1F228295D4700989E0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207B1F128295D4700989E0D /* SceneDelegate.swift */; };
 		D207B1F928295D4800989E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D207B1F828295D4800989E0D /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047FA2AF282BBE0700BFB0A1 /* UICollectionGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionGallery.swift; sourceTree = "<group>"; };
+		047FA2B1282BBFB300BFB0A1 /* ModelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCollection.swift; sourceTree = "<group>"; };
+		047FA2B3282BC10200BFB0A1 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4640580412E2561D4C65F702 /* Pods_Barbershop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barbershop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6989D4E598E6231935ECCD34 /* Pods-Barbershop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barbershop.release.xcconfig"; path = "Target Support Files/Pods-Barbershop/Pods-Barbershop.release.xcconfig"; sourceTree = "<group>"; };
 		D207B1EC28295D4700989E0D /* Barbershop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barbershop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D207B207282960D300989E0D /* ModelData.swift */,
+				047FA2B1282BBFB300BFB0A1 /* ModelCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +143,8 @@
 				D207B2092829610500989E0D /* NoutsViewContoller.swift */,
 				D207B20B2829610F00989E0D /* AboutvViewController.swift */,
 				D207B20D2829611800989E0D /* GalleryViewController.swift */,
+				047FA2AF282BBE0700BFB0A1 /* UICollectionGallery.swift */,
+				047FA2B3282BC10200BFB0A1 /* GalleryCollectionViewCell.swift */,
 				D207B20F2829613300989E0D /* TabBarController.swift */,
 			);
 			path = Controller;
@@ -260,11 +269,14 @@
 				D207B2142829666000989E0D /* NoutsView.swift in Sources */,
 				D207B20E2829611800989E0D /* GalleryViewController.swift in Sources */,
 				D207B208282960D300989E0D /* ModelData.swift in Sources */,
+				047FA2B2282BBFB300BFB0A1 /* ModelCollection.swift in Sources */,
 				D207B1F028295D4700989E0D /* AppDelegate.swift in Sources */,
 				D207B1F228295D4700989E0D /* SceneDelegate.swift in Sources */,
 				D207B20C2829610F00989E0D /* AboutvViewController.swift in Sources */,
 				D207B212282961D000989E0D /* AboutvView.swift in Sources */,
 				D207B2162829666B00989E0D /* GalleryView.swift in Sources */,
+				047FA2B4282BC10200BFB0A1 /* GalleryCollectionViewCell.swift in Sources */,
+				047FA2B0282BBE0700BFB0A1 /* UICollectionGallery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,19 +416,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ8B9FFXUA;
+				DEVELOPMENT_TEAM = 87MK9SAST8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Barbershop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kiko.Barbershop;
+				PRODUCT_BUNDLE_IDENTIFIER = dimov.Barbershop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -432,19 +445,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UJ8B9FFXUA;
+				DEVELOPMENT_TEAM = 87MK9SAST8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Barbershop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kiko.Barbershop;
+				PRODUCT_BUNDLE_IDENTIFIER = dimov.Barbershop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
