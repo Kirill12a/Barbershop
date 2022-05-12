@@ -1,12 +1,14 @@
 
+
 import UIKit
 import SnapKit
 import SwiftUI
 
 class AboutvView: UIView {
 
- 
-//MARK: - Элементы Картинки
+
+    //MARK: - Элементы Картинки
+
     lazy var myImage: UIImageView = {
         var imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -18,13 +20,11 @@ class AboutvView: UIView {
         var imageLogo = UIImageView()
         imageLogo.contentMode = .scaleAspectFit
         imageLogo.image = UIImage(named: "barber")
-
-        imageLogo.backgroundColor = .red
         return imageLogo
     }()
 
 
-//MARK: - Элементы Кнопки
+    //MARK: - Элементы Кнопки
     lazy var buttonRegister: UIButton = {
         var button = UIButton(type: .system)
         button.setTitle("Записаться", for: .normal)
@@ -32,6 +32,42 @@ class AboutvView: UIView {
         button.backgroundColor = .black
         button.layer.cornerRadius = 20
         button.addTarget(self, action: #selector(phone(_:)), for: .touchDown)
+        return button
+    }()
+
+    @objc func whatsApp(_ sender: UIButton) {
+        let phoneNumber = "+79185143314"
+        let url = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
+        if UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 13.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+            else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+        //        UIApplication.shared.open(URL(string: "https://www.google.ru/")! as URL, options: [:], completionHandler: nil)
+    }
+
+    @objc func phone(_ sender: UIButton) {
+        let phoneNubmer = "+79185143314"
+        if let url = URL(string: "tel://\(phoneNubmer)") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.open(url)
+            }
+        }
+        //UIApplication.shared.open(URL(string: "")! as URL, options: [:], completionHandler: nil)
+    }
+
+    lazy var buttonWhatsApp: UIButton = {
+        var button = UIButton(type: .system)
+        button.setTitle("Написать нам ", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .black
+        button.layer.cornerRadius = 20
+        button.addTarget(self, action: #selector(whatsApp(_:)), for: .touchDown)
         return button
     }()
     
@@ -75,13 +111,15 @@ class AboutvView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         screenConstraint()
-
+        print(NoutsViewContoller.screnSize.height)
     }
 
-//MARK: - Констрейнты
+    //MARK: - Констрейнты
     private func screenConstraint(){
 
-        
+        //            make.width.equalTo(NoutsViewContoller.screnSize.width)
+
+
         self.addSubview(myImage)
         myImage.snp.makeConstraints { make in
             make.top.leading.trailing.bottom.equalToSuperview()
@@ -90,12 +128,9 @@ class AboutvView: UIView {
 
         self.addSubview(logoImage)
         logoImage.snp.makeConstraints { make in
-            make.left.equalTo(self).inset(40)
-            make.right.equalTo(self).inset(40)
-            make.height.equalTo(200)
-            make.width.equalTo(150)
-           // make.center.equalToSuperview()
-            make.top.equalToSuperview().inset(235)
+            make.height.equalTo(NoutsViewContoller.screnSize.height / 2.3)
+            make.width.equalTo(NoutsViewContoller.screnSize.width / 1.3)
+            make.center.equalToSuperview()
 
         }
         
@@ -109,15 +144,27 @@ class AboutvView: UIView {
             
         }
 
-
+        // кнопка "Записаться"
         self.addSubview(buttonRegister)
         buttonRegister.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(350)
-            make.width.equalTo(250)
-            make.height.equalTo(50)
-            make.top.equalTo(logoImage.snp_bottomMargin).inset(150)
+            make.width.equalTo((NoutsViewContoller.screnSize.width / 1.24))
+            make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(NoutsViewContoller.screnSize.width / 4.5) // пока пусть будет так 
+
+
         }
+
+        // кнопка "Написать"
+        self.addSubview(buttonWhatsApp)
+        buttonWhatsApp.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalTo(NoutsViewContoller.screnSize.width / 1.24)
+            make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(10)
+        }
+
+
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -144,4 +191,3 @@ struct FlowProvider: PreviewProvider {
         }
     }
 }
-

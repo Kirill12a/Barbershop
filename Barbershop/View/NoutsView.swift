@@ -60,11 +60,9 @@ class NoutsView: UIView {
     }()
     lazy var addresSource: UILabel = {
         var label = UILabel()
-        label.text = "Маршала Жукова д49"
+        label.text = "Ул. Ленина, 73"
         return label
     }()
-
-
 
 
     lazy var  phoneForContactsScreen: UILabel = {
@@ -78,15 +76,10 @@ class NoutsView: UIView {
 
     lazy var phoneSource: UILabel = {
         var label = UILabel()
-        label.text = "+7 915 004-78-08"
+        label.text = "+7 915 004-78-08" // это рандомный номер !!!!!!!!!!!!!
         label.textAlignment = .left
         return label
     }()
-
-
-
-
-
 
     lazy var workingHoursForContactsScreen: UILabel = {
         var label = UILabel()
@@ -102,10 +95,6 @@ class NoutsView: UIView {
         label.textAlignment = .left
         return label
     }()
-
-
-
-
 
     lazy  var collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
@@ -195,7 +184,7 @@ class NoutsView: UIView {
         }
 
 
-//        servicesScreenView
+        //        servicesScreenView
 
         servicesScreenView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in

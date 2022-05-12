@@ -5,13 +5,14 @@ final class GalleryView: UIView {
 
     static let singltone = GalleryView()
 
-    
+
+
     lazy  var collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
         collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: "cell1")
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = .orange
+        collectionView.backgroundColor = .white
         return collectionView
     }()
 
@@ -20,9 +21,8 @@ final class GalleryView: UIView {
         super.init(frame: frame)
         constraintCell()
     }
-    
-    
-   private func constraintCell() {
+    private func constraintCell() {
+
         self.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.trailing.leading.top.bottom.equalToSuperview()
