@@ -31,15 +31,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+
+    //MARK:  - для вертикального режима
+
     var orientationLock = UIInterfaceOrientationMask.all
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
             return self.orientationLock
     }
+
+    // ------------------------------------ \\
     
     
 }
 
+
+//MARK:  - для вертикального режима
 struct AppUtility {
 
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
@@ -48,8 +55,6 @@ struct AppUtility {
             delegate.orientationLock = orientation
         }
     }
-
-    /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
 
         self.lockOrientation(orientation)

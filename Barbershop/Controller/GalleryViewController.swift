@@ -8,34 +8,30 @@
 import Foundation
 import UIKit
 
-class GalleryViewController: UIViewController {
+final class GalleryViewController: UIViewController {
     
-    fileprivate lazy var gallerySource = GalleryView()
-    
+    fileprivate lazy var gallerySource = GalleryView() // источник view
+
+    //MARK: - loadView()
     override func loadView() {
         super.loadView()
         self.view = gallerySource
     }
-    
+
+    //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // подключаем delegate
         gallerySource.collectionView.delegate = self
         gallerySource.collectionView.dataSource = self
 
-
-        navigationController?.navigationBar.barTintColor = UIColor.white
-
-        // ext:
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-
-        // Tab Bar:
-        tabBarController?.tabBar.barTintColor = UIColor.black
-
-        // Tab Bar Text:
-        tabBarController?.tabBar.tintColor = UIColor.yellow
+        ConstantAndAnyFunc.setColorSettings(navigationController: navigationController!, tabBarController: tabBarController! as! TabBarController, colorOne: .white, colorTwo: .black)
     }
 }
 
+
+ //MARK: - Все для CollectionView()
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize{
@@ -54,10 +50,10 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 2
         cell.backgroundColor = .gray
-
         cell.myImgaeView.image = UIImage(named: "barber")
 
         return cell
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

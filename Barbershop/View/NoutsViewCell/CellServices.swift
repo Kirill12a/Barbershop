@@ -9,14 +9,12 @@ import Foundation
 import SnapKit
 import UIKit
 
-
 final class CellServices: UICollectionViewCell {
     
     lazy var imageCervices: UIImageView = {
         var imageView = UIImageView()
         contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
-        
         return imageView
     }()
     
@@ -26,8 +24,7 @@ final class CellServices: UICollectionViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
-    
-    
+
     lazy var priceLabel: UILabel = {
         var label = UILabel()
         label.textColor = .red
@@ -41,12 +38,8 @@ final class CellServices: UICollectionViewCell {
         imageCervices.layer.cornerRadius = 20
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
     func constraintElement(){
+
         contentView.addSubview(imageCervices)
         imageCervices.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(contentView.frame.width / 6)
@@ -66,6 +59,11 @@ final class CellServices: UICollectionViewCell {
             make.trailing.equalToSuperview().inset(20)
             make.top.equalTo(imageCervices.snp_bottomMargin).offset(20)
         }
+    }
+
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }

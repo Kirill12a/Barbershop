@@ -9,22 +9,17 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    //MARK:  - что бы был, только вертикальный режим
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
-
        AppUtility.lockOrientation(.portrait)
-       // Or to rotate and lock
-       // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
-
    }
-
    override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)
-
-       // Don't forget to reset when view is being removed
        AppUtility.lockOrientation(.all)
    }
 
+    //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,8 +31,9 @@ class TabBarController: UITabBarController {
         self.selectedIndex = 1
 
     }
-
+    // найстроки tabBar (заполнение элементами и все такое)
     func tabBarController() {
+
         let aboutVC = UINavigationController.init(rootViewController: NoutsViewContoller())
         aboutVC.tabBarItem.image = UIImage(systemName: "person")
         aboutVC.tabBarItem.title = "О нас"
@@ -49,8 +45,6 @@ class TabBarController: UITabBarController {
         galleryVS.tabBarItem.image = UIImage(systemName: "camera")
         galleryVS.tabBarItem.title = "Фото"
 
-
         viewControllers = [aboutVC, noutsVS, galleryVS]
-
     }
 }
