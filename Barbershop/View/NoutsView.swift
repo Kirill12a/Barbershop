@@ -201,7 +201,7 @@ class NoutsView: UIView {
         }
 
 
-//        servicesScreenView
+        //        servicesScreenView
 
         servicesScreenView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in

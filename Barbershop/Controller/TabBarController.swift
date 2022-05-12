@@ -32,7 +32,7 @@ class TabBarController: UITabBarController {
         galleryVS.tabBarItem.image = UIImage(systemName: "camera")
         galleryVS.tabBarItem.title = "Фото"
 
-         viewControllers = [aboutVC, noutsVS, galleryVS]
+        viewControllers = [aboutVC, noutsVS, galleryVS]
 
     }
 }
