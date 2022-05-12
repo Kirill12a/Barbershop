@@ -1,9 +1,3 @@
-//
-//  AboutvView.swift
-//  Barbershop
-//
-//  Created by Kirill Drozdov on 09.05.2022.
-//
 
 
 import UIKit
@@ -14,6 +8,7 @@ class AboutvView: UIView {
 
 
     //MARK: - Элементы Картинки
+
     lazy var myImage: UIImageView = {
         var imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -75,8 +70,44 @@ class AboutvView: UIView {
         button.addTarget(self, action: #selector(whatsApp(_:)), for: .touchDown)
         return button
     }()
-
-
+    
+    @objc func whatsApp(_ sender: UIButton) {
+        let phoneNumber = "+79185143314"
+        let url = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
+        if UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 13.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+            else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+//        UIApplication.shared.open(URL(string: "https://www.google.ru/")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    @objc func phone(_ sender: UIButton) {
+        let phoneNubmer = "+79185143314"
+        if let url = URL(string: "tel://\(phoneNubmer)") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.open(url)
+            }
+        }
+        //UIApplication.shared.open(URL(string: "")! as URL, options: [:], completionHandler: nil)
+    }
+    
+    lazy var buttonWhatsApp: UIButton = {
+        var button = UIButton(type: .system)
+        button.setTitle("Написать нам ", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .black
+        button.layer.cornerRadius = 20
+        button.addTarget(self, action: #selector(whatsApp(_:)), for: .touchDown)
+        return button
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         screenConstraint()
@@ -87,6 +118,7 @@ class AboutvView: UIView {
     private func screenConstraint(){
 
         //            make.width.equalTo(NoutsViewContoller.screnSize.width)
+
 
         self.addSubview(myImage)
         myImage.snp.makeConstraints { make in
@@ -99,8 +131,18 @@ class AboutvView: UIView {
             make.height.equalTo(NoutsViewContoller.screnSize.height / 2.3)
             make.width.equalTo(NoutsViewContoller.screnSize.width / 1.3)
             make.center.equalToSuperview()
-        }
 
+        }
+        
+        self.addSubview(buttonWhatsApp)
+        buttonWhatsApp.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalTo(250)
+            make.height.equalTo(50)
+            make.bottom.equalToSuperview().inset(400)
+            make.top.equalTo(logoImage.snp_bottomMargin).inset(210)
+            
+        }
 
         // кнопка "Записаться"
         self.addSubview(buttonRegister)
@@ -109,6 +151,7 @@ class AboutvView: UIView {
             make.width.equalTo((NoutsViewContoller.screnSize.width / 1.24))
             make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
             make.bottom.equalTo(safeAreaLayoutGuide).inset(NoutsViewContoller.screnSize.width / 4.5) // пока пусть будет так 
+
 
         }
 

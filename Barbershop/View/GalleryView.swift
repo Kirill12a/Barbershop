@@ -1,15 +1,10 @@
-//
-//  GalleryView.swift
-//  Barbershop
-//
-//  Created by Kirill Drozdov on 09.05.2022.
-//
 
 import UIKit
 
 final class GalleryView: UIView {
 
     static let singltone = GalleryView()
+
 
 
     lazy  var collectionView: UICollectionView = {
@@ -21,12 +16,13 @@ final class GalleryView: UIView {
         return collectionView
     }()
 
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         constraintCell()
     }
-
     private func constraintCell() {
+
         self.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.trailing.leading.top.bottom.equalToSuperview()

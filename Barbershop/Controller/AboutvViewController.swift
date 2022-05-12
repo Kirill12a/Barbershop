@@ -1,21 +1,19 @@
-//
-//  AboutvViewController.swift
-//  Barbershop
-//
-//  Created by Kirill Drozdov on 09.05.2022.
-//
+
 
 import UIKit
 import SnapKit
 
 class AboutvViewController: UIViewController { // о нас
 
+
     fileprivate lazy var sourceView = AboutvView() // источник view данных для нашего controllera
 
 //MARK: - loadView()
+
     override func loadView() {
         super.loadView()
         self.view = sourceView
+
     }
 
 //MARK: - viewDidLoad()
@@ -23,5 +21,6 @@ class AboutvViewController: UIViewController { // о нас
         super.viewDidLoad()
         view.backgroundColor = .white
     }
+    
 }
 

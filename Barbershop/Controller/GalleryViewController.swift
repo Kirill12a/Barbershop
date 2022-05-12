@@ -1,11 +1,3 @@
-//
-//  GalleryViewController.swift
-//  Barbershop
-//
-//  Created by Kirill Drozdov on 09.05.2022.
-//
-
-import Foundation
 import UIKit
 
 final class GalleryViewController: UIViewController {
@@ -13,14 +5,23 @@ final class GalleryViewController: UIViewController {
     fileprivate lazy var gallerySource = GalleryView() // источник view
 
     //MARK: - loadView()
+
     override func loadView() {
         super.loadView()
         self.view = gallerySource
     }
 
     //MARK: - viewDidLoad()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        gallerySource.collectionView.delegate = self
+        gallerySource.collectionView.dataSource = self
+        
+    }
+}
+
+extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
         // подключаем delegate
         gallerySource.collectionView.delegate = self
@@ -36,6 +37,7 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize{
         
+
         return CGSize(width: view.frame.width / 1.1,  height: view.frame.height / 2.2 )
     }
     
@@ -46,12 +48,10 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! GalleryCollectionViewCell
-
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 2
         cell.backgroundColor = .gray
         cell.myImgaeView.image = UIImage(named: "barber")
-
         return cell
 
     }
@@ -60,4 +60,10 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         return UIEdgeInsets(top:5, left: 16, bottom: 10, right: 16)
     }
     
+
 }
+
+
+
+
+
