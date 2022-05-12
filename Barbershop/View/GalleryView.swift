@@ -17,7 +17,7 @@ final class GalleryView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
         collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: "cell1")
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = .orange
+        collectionView.backgroundColor = .white
         return collectionView
     }()
 

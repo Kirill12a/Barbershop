@@ -9,6 +9,22 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+
+       AppUtility.lockOrientation(.portrait)
+       // Or to rotate and lock
+       // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+
+   }
+
+   override func viewWillDisappear(_ animated: Bool) {
+       super.viewWillDisappear(animated)
+
+       // Don't forget to reset when view is being removed
+       AppUtility.lockOrientation(.all)
+   }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +33,7 @@ class TabBarController: UITabBarController {
         tabBar.backgroundColor = .black
 
         tabBarController()
+        self.selectedIndex = 1
 
     }
 
@@ -31,6 +48,7 @@ class TabBarController: UITabBarController {
         let galleryVS = UINavigationController.init(rootViewController: GalleryViewController())
         galleryVS.tabBarItem.image = UIImage(systemName: "camera")
         galleryVS.tabBarItem.title = "Фото"
+
 
         viewControllers = [aboutVC, noutsVS, galleryVS]
 

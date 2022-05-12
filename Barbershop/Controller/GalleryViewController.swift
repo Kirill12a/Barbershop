@@ -21,7 +21,18 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         gallerySource.collectionView.delegate = self
         gallerySource.collectionView.dataSource = self
-        
+
+
+        navigationController?.navigationBar.barTintColor = UIColor.white
+
+        // ext:
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+        // Tab Bar:
+        tabBarController?.tabBar.barTintColor = UIColor.black
+
+        // Tab Bar Text:
+        tabBarController?.tabBar.tintColor = UIColor.yellow
     }
 }
 
@@ -39,7 +50,13 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! GalleryCollectionViewCell
+
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 2
+        cell.backgroundColor = .gray
+
         cell.myImgaeView.image = UIImage(named: "barber")
+
         return cell
     }
     
