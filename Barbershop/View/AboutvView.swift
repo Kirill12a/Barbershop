@@ -80,12 +80,13 @@ class AboutvView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         screenConstraint()
-
+        print(NoutsViewContoller.screnSize.height)
     }
 
     //MARK: - Констрейнты
     private func screenConstraint(){
 
+        //            make.width.equalTo(NoutsViewContoller.screnSize.width)
 
         self.addSubview(myImage)
         myImage.snp.makeConstraints { make in
@@ -95,34 +96,32 @@ class AboutvView: UIView {
 
         self.addSubview(logoImage)
         logoImage.snp.makeConstraints { make in
-            make.left.equalTo(self).inset(40)
-            make.right.equalTo(self).inset(40)
-            make.height.equalTo(200)
-            make.width.equalTo(150)
-            // make.center.equalToSuperview()
-            make.top.equalToSuperview().inset(235)
-
-        }
-
-        self.addSubview(buttonWhatsApp)
-        buttonWhatsApp.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.width.equalTo(250)
-            make.height.equalTo(50)
-            make.bottom.equalToSuperview().inset(400)
-            make.top.equalTo(logoImage.snp_bottomMargin).inset(210)
-
+            make.height.equalTo(NoutsViewContoller.screnSize.height / 2.3)
+            make.width.equalTo(NoutsViewContoller.screnSize.width / 1.3)
+            make.center.equalToSuperview()
         }
 
 
+        // кнопка "Записаться"
         self.addSubview(buttonRegister)
         buttonRegister.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(350)
-            make.width.equalTo(250)
-            make.height.equalTo(50)
-            make.top.equalTo(logoImage.snp_bottomMargin).inset(150)
+            make.width.equalTo((NoutsViewContoller.screnSize.width / 1.24))
+            make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(NoutsViewContoller.screnSize.width / 4.5) // пока пусть будет так 
+
         }
+
+        // кнопка "Написать"
+        self.addSubview(buttonWhatsApp)
+        buttonWhatsApp.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalTo(NoutsViewContoller.screnSize.width / 1.24)
+            make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(10)
+        }
+
+
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

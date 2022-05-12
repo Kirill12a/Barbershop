@@ -21,12 +21,10 @@ final class GalleryView: UIView {
         return collectionView
     }()
 
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         constraintCell()
     }
-
 
     private func constraintCell() {
         self.addSubview(collectionView)
