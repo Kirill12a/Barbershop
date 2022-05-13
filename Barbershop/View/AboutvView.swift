@@ -102,13 +102,18 @@ class AboutvView: UIView {
         }
 
 
-        // кнопка "Записаться"
-        self.addSubview(buttonRegister)
-        buttonRegister.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.width.equalTo((NoutsViewContoller.screnSize.width / 1.24))
-            make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
-            make.bottom.equalTo(safeAreaLayoutGuide).inset(NoutsViewContoller.screnSize.width / 4.5) // пока пусть будет так 
+        // анимация воркает криво 
+        UIView.animate(withDuration: 1.0) { [self] in
+            // кнопка "Записаться"
+            self.addSubview(buttonRegister)
+            buttonRegister.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.width.equalTo((NoutsViewContoller.screnSize.width / 1.24))
+                make.height.equalTo(NoutsViewContoller.screnSize.height / 12)
+                make.bottom.equalTo(safeAreaLayoutGuide).inset(NoutsViewContoller.screnSize.width / 4.5) // пока пусть будет так
+            }
+          self.layoutIfNeeded()
+
 
         }
 
