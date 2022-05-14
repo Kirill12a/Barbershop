@@ -29,7 +29,7 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
 
         ConstantAndAnyFunc.setColorSettings(navigationController: navigationController!, tabBarController: tabBarController! as! TabBarController, colorOne: .white, colorTwo: .black)
     }
-}
+
 
 
  //MARK: - Все для CollectionView()
@@ -59,8 +59,6 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top:5, left: 16, bottom: 10, right: 16)
     }
-    
-
 }
 
 

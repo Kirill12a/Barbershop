@@ -170,24 +170,4 @@ class AboutvView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-//MARK: - Canvas
-struct FlowProvider: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContainterView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
-            ContainterView().edgesIgnoringSafeArea(.all).previewInterfaceOrientation(.portrait)
-        }
-    }
 
-    struct ContainterView: UIViewControllerRepresentable {
-
-        let view = AboutvViewController()
-        func makeUIViewController(context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) -> AboutvViewController {
-            return view
-        }
-
-        func updateUIViewController(_ uiViewController: FlowProvider.ContainterView.UIViewControllerType, context: UIViewControllerRepresentableContext<FlowProvider.ContainterView>) {
-
-        }
-    }
-}
